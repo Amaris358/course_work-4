@@ -27,7 +27,7 @@ class SaverJSON(Saver):
             return [
                 vacancy
                 for vacancy in data
-                if vacancy["Зарплата минимальная"] >= salary_min and vacancy["Зарплата максимальная"] <= salary_max
+                if vacancy["Зарплата минимальная"] and vacancy["Зарплата максимальная"] and vacancy["Зарплата минимальная"] >= salary_min and vacancy["Зарплата максимальная"] <= salary_max
             ]
         except Exception as error:
             raise Exception(f"Ошибка {error}")

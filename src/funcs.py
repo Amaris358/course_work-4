@@ -90,6 +90,6 @@ def sort_by_salary(vacancies: list) -> list:
     Сортирует вакансии по зарплате
     """
     try:
-        return sorted(vacancies, key=lambda x: x["Зарплата от"], reverse=True)
+        return sorted(vacancies, key=lambda x: x["Зарплата минимальная"], reverse=True)
     except Exception as error:
         raise Exception(f"Ошибка {error}")

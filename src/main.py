@@ -105,7 +105,6 @@ def user_interaction() -> None:
         except ValueError:
             print("Ошибка ввода")
             return
-
     else:
         pprint(sort_by_date(vacancies_json_list))
 
